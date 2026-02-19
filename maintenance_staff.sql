@@ -1,7 +1,7 @@
-CREATE TABLE staff(
-	ID: PrIMARY KEY;
-	name,
-	office_number:int,
-	phone_number:int,
-	email:,
+CREATE TABLE staff (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT NOT NULL,
+    office_number INTEGER,
+    phone_number TEXT,
+    email TEXT
 );
