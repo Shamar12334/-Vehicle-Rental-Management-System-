@@ -1,7 +1,7 @@
 CREATE TABLE staff (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    name TEXT NOT NULL,
-    office_number INTEGER,
-    phone_number TEXT,
-    email TEXT
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    office_number INT,
+    phone_number VARCHAR(20),
+    email VARCHAR(150)
 );
