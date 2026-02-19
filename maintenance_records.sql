@@ -10,5 +10,6 @@ CREATE TABLE records (
     resolved_date DATE,
     resolved_time DATETIME,
     staff_assigned INT,
-    notes TEXT
+    notes TEXT,
+    FOREIGN KEY (staff_assigned) REFERENCES staff(id)
 );
