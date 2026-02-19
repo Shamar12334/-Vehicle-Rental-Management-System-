@@ -1,14 +1,14 @@
 CREATE TABLE records (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    id INT AUTO_INCREMENT PRIMARY KEY,
     date DATE,
     time DATETIME,
-    vehicle INTEGER,
-    reporting_customer INTEGER,
-    issue_type TEXT CHECK(issue_type IN ('routine', 'urgent')),
+    vehicle INT,
+    reporting_customer INT,
+    issue_type ENUM('routine', 'urgent'),
     description TEXT,
-    status TEXT,
+    status VARCHAR(50),
     resolved_date DATE,
     resolved_time DATETIME,
-    staff_assigned TEXT,
+    staff_assigned INT,
     notes TEXT
 );
