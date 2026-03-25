@@ -1,7 +1,28 @@
 from fastapi import FastAPI
+import sqlite3
 
-app =FastAPI()
+app = FastAPI()
+DB_FILE = "database.db"
+#-----------------------------------------------|
+#------------Database Setup---------------------|
+#-----------------------------------------------|
+def get_db_connection():
+    conn = sqlite3.connect(DB_FILE)
+    conn.row_factory = sqlite3.Row  # lets you access columns by name
+    return conn
+#-----------------------------------------------|
+#------------Table Setup------------------------|
+#-----------------------------------------------|
 
+#///////////////////////////////////////////////|
+#////////////Schema Setup///////////////////////|
+#\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\|
+
+
+#-----------------------------------------------|
+#-------------Route Setup-----------------------|
+#-----------------------------------------------|
+# example route
 @app.get("/")
 def read_root():
-    return {"hello":"world"}
+    return {"hello": "world"}
