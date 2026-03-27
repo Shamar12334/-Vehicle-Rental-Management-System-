@@ -1,6 +1,7 @@
 # =============================================================================
 # AI DISCLOSURE
 # Tool used: Claude
+# AI-generated parts: UI layout, Insert Vehicle form validation and display table.
 # Note: Group members reviewed, tested, and remain fully responsible for errors.
 # =============================================================================
 
