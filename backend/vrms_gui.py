@@ -177,7 +177,7 @@ def validate_and_insert():
         return
 
     sql = """INSERT INTO Vehicle
-             (VehicleID,LicensePlate,Make,Model,Year,Color,
+             (VehicleID,LicensePlate,Make,Model,`Year`,Color,
               DailyRentalRate,CurrentMileage,TypeID,BranchID)
              VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"""
     vals = (vid, data["LicensePlate"], data["Make"], data["Model"],
