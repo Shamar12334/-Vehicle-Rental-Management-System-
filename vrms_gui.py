@@ -21,7 +21,6 @@ DB_CONFIG = {
     "password": "",            # ← your MySQL password
     "database": "vrms"         # ← your database name
 }
-
 def get_connection():
     return mysql.connector.connect(**DB_CONFIG)
 
@@ -50,6 +49,7 @@ try:
     icon_label = ctk.CTkLabel(header, image=icon_img, text="", fg_color="transparent")
     icon_label.pack(side="left", padx=(18, 10), pady=12)
 except Exception:
+    # fallback: just show a placeholder text if icon.png is missing
     ctk.CTkLabel(header, text="🚗", font=ctk.CTkFont(size=28),
                  fg_color="transparent", text_color="white")\
         .pack(side="left", padx=(18, 10), pady=12)
@@ -63,7 +63,7 @@ ctk.CTkLabel(title_frame, text="VRMS — Part 2 Interface",
              font=ctk.CTkFont(size=11),
              text_color="#90afd4").pack(anchor="w")
 
-
+# DB status pill
 status_frame = ctk.CTkFrame(header, fg_color="#ffffff18",
                               corner_radius=20, border_width=1,
                               border_color="#ffffff30")
@@ -201,9 +201,7 @@ ctk.CTkButton(t1, text="Insert Vehicle",
               command=validate_and_insert).grid(
     row=12, column=0, columnspan=2, pady=(12, 4), padx=16, sticky="w")
 
-# ── TAB 2 — RENTAL AGREEMENTS ─────────────────────────────────────────────────
 t2 = tabs.tab("  Rental Agreements  ")
-
 search_row = ctk.CTkFrame(t2, fg_color="transparent")
 search_row.pack(fill="x", padx=4, pady=(4, 12))
 
