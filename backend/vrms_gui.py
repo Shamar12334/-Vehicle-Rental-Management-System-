@@ -2,7 +2,6 @@
 # AI DISCLOSURE
 # Tool used: Claude
 # AI-generated parts: UI layout, Insert Vehicle form validation and display table.
-# Note: Group members reviewed, tested, and remain fully responsible for errors.
 # =============================================================================
 
 # REQUIREMENTS:
@@ -13,13 +12,17 @@ import mysql.connector
 from tkinter import messagebox, ttk
 from PIL import Image, ImageTk
 import urllib.request
-import io
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+
 
 DB_CONFIG = {
-    "host":     "localhost",
-    "user":     "root",        # ← change if needed
-    "password": "",            # ← your MySQL password
-    "database": "vrms"         # ← your database name
+    "host": os.getenv("DB_HOST"),
+    "user": os.getenv("DB_USER"),
+    "password": os.getenv("DB_PASSWORD"),
+    "database": os.getenv("DB_NAME")
 }
 
 def get_connection():
