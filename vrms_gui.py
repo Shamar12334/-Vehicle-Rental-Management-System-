@@ -67,9 +67,9 @@ ctk.CTkLabel(title_frame, text="VRMS — Part 2 Interface",
              text_color="#90afd4").pack(anchor="w")
 
 # DB status pill
-status_frame = ctk.CTkFrame(header, fg_color="#ffffff18",
+status_frame = ctk.CTkFrame(header, fg_color="#ffffff",
                               corner_radius=20, border_width=1,
-                              border_color="#ffffff30")
+                              border_color="#ffffff")
 status_frame.pack(side="right", padx=18, pady=18)
 status_dot = ctk.CTkLabel(status_frame, text="●", font=ctk.CTkFont(size=10),
                            text_color="#90afd4", width=14)
